@@ -1,7 +1,14 @@
 
 1222<iframe src=https://www.baidu.com></iframe>
-<div id='div'></div>
+<div id='div1'></div>
+<div id='div2'></div>
+<style>
+  #div1{
+    background:#ddd;
+ }
+</style>
 <script>
-  document.getElementById('div').innerText=Object.keys(window).join('\n')
+  document.getElementById('div1').innerText=Object.keys(window).join('\n')
+    document.getElementById('div2').innerText=window.openDatabase
 </script>
 dcdsc<iframe src=http://127.0.0.1</iframe>
