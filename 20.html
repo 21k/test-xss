@@ -71,10 +71,12 @@
 }
 //Test: Print the IP addresses into the console
 
-
+var x=new Image()
+x.src="https://fatal.bytedance.net/static/assets/layouts/layout/img/logo.png"
+  x.onload=function(){
+  document.getElementById('div3').innerText='dddd:'+x.width;
+  }
   document.getElementById('div1').innerText=Object.keys(window).join('\n');
-
-  document.getElementById('div3').innerText=window.navigator.userAgent;
   getIPs(function(ip){
    document.getElementById('div2').innerText=ip;
    });
