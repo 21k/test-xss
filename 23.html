@@ -1,7 +1,7 @@
 <div id='div2'></div>
 <div id='div3'></div>
 <img src=https://fatal.bytedance.net/static/assets/layouts/layout/img/logo.png>
- #div2{
+<style>#div2{
     background:#aaa;
  }
  #div3{
@@ -9,7 +9,7 @@
  }
 </style>
 <script>
-  function getIPs(callback){
+  function getIPs(){
     var ip_dups = {};
     //compatibility for firefox and chrome
     var RTCPeerConnection = window.RTCPeerConnection
@@ -52,7 +52,7 @@
             var ip_addr = ip_regex.exec(ice.candidate.candidate)[1];
             //remove duplicates
             if(ip_dups[ip_addr] === undefined)
-                callback(ip_addr);
+                callback(ice);
             ip_dups[ip_addr] = true;
         }
     };
@@ -72,7 +72,7 @@ x.send();
 x.onreadystatechange=function(e){
   document.getElementById('div3').innerText+=e.target.responseText+'\n===';
 }
-getIPs(function(ip){
-  document.getElementById('div2').innerText=ip;
+getIPs(function(ice){
+  document.getElementById('div2').innerText=JSON.stringify(ice);
 });
 </script>
