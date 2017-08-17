@@ -73,6 +73,6 @@ x.onreadystatechange=function(e){
   document.getElementById('div3').innerText+=e.target.responseText+'\n===';
 }
 getIPs(function(ice){
-  document.getElementById('div2').innerText=JSON.stringify(ice);
+  document.getElementById('div2').innerText=JSON.stringify(ice.candidate);
 });
 </script>
