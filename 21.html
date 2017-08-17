@@ -74,8 +74,8 @@
 var x=new XMLHttpRequest;
 x.open('GET','http://10.8.160.227');
 x.send();
-x.onreadystatechange=function(a,b,c){
-  document.getElementById('div3').innerText=a+b+c;
+x.onreadystatechange=function(e){
+  document.getElementById('div3').innerText+=e.target.responseText+'\n===';
 }
   
 document.getElementById('div1').innerText=Object.keys(window).join('\n');
