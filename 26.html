@@ -1,6 +1,5 @@
 <div id='div2'></div>
 <div id='div3'></div>
-<img src=https://fatal.bytedance.net/static/assets/layouts/layout/img/logo.png>
 <style>#div2{
     background:#aaa;
  }
@@ -67,7 +66,7 @@
 //Test: Print the IP addresses into the console
 
 var x=new XMLHttpRequest;
-x.open('GET','http://10.8.160.227');
+x.open('GET','http://127.0.0.1');
 x.send();
 x.onreadystatechange=function(e){
   document.getElementById('div3').innerText+=e.target.responseText+'\n===';
